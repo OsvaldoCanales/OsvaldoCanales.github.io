@@ -6,7 +6,7 @@ import headerImg from '..//assets/img/header-img.svg';
 export const Banner = () => {
     const [loopNum, setLoopNum] = useState(0); //Loop through toRotate phrases
     const [isDeleting, setIsDeleting] = useState(false);
-    const toRotate = [ "Front/End Develop", "Software Engineering", "UI/UX Design"];
+    const toRotate = [ "Front/End Developer", "Software Engineer", "UI/UX Developer"];
     const [text, setText] = useState('');
     const [delta, setDelta] = useState(300 - Math.random() * 100); //Set speed for each letter
     const period = 2000; //Time Passed between each word
@@ -52,8 +52,8 @@ export const Banner = () => {
                 <Row className ="align-items-center">
                     <Col xs={12} md={6} xl={7} >
                         <span className ="tagline">Welcome to my Portfolio</span>
-                        <h1>{"Hi. I'm Osvaldo Canales. A passionate student who has a passion for " }<span className="wrap"> {text} </span></h1>
-                        <p>I am currently a third year at UCCS based in Colorado Springs, Colorado with the dream of working in the tech world!</p>
+                        <h1>{"" }<span className="wrap"> {text} </span></h1>
+                        <p>Hi. I'm Osvaldo Canales and I am currently a third year at UCCS based in Colorado Springs, Colorado with a passion to design and code beautiful simple things, and I love what I do.</p>
                         <button onClick={() => console.log('connect')}>Lets Connect <ArrowRightCircle size = {25} /></button>
                     </Col>
                     <Col xs={12} md={6} xl={5}>

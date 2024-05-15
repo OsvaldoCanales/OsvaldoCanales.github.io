@@ -35,25 +35,31 @@ export const Skills = () => {
                     <Col>   
                         <div className="skill-bx">
                             <h2>
-                                Skills
+                                Technical Skills
                             </h2>
-                            <p>Skill Section </p>
+                            <p>
+                                Languages: Python, Java, C, R, Assembly <br></br>
+                                Developer Tools: Git, VS Code, Visual Studio, Eclipse, Replit <br></br>
+                                Libraries: Pandas, Numpy, Matplotlib, Seaborn, NLTK, HuggingFace Transformers, Tqdm, Pygame <br></br>
+                                Frameworks: Django, React 
+
+                                 </p>
                             <Carousel responsive={responsive} infinite={true} className="skill-slider">
                                 <div className="item">
                                     <img src={meter1} alt="Image" />
-                                    <h5> Web Development</h5>
+                                    <h5> Django</h5>
                                 </div>
                                 <div className="item">
                                     <img src={meter2} alt="Image" />
-                                    <h5> Brand Identity </h5>
-                                </div>
-                                <div className="item">
-                                    <img src={meter3} alt="Image" />
-                                    <h5> Software Development</h5>
+                                    <h5> React  </h5>
                                 </div>
                                 <div className="item">
                                     <img src={meter1} alt="Image" />
-                                    <h5> Front/Back End Development</h5>
+                                    <h5> Python </h5>
+                                </div>
+                                <div className="item">
+                                    <img src={meter3} alt="Image" />
+                                    <h5> Java</h5>
                                 </div>
                             </Carousel>
                         </div>
