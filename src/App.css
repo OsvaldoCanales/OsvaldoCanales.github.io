@@ -260,6 +260,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-repeat: no-repeat;
   
 }
+/* Modifies the tagline section */
 .banner .tagline { 
   font-weight: 700;
   letter-spacing: 0.8px;
@@ -271,7 +272,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: inline-block;
 
 }
-
+/*Modifies the first header */
 .banner h1 { 
   font-size: 65px; 
   font-weight: 700;
@@ -279,6 +280,54 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   line-height: 1;
   margin-bottom: 20px;
   display: block;
+}
+/*Modifies the paragraph section */
+.banner p { 
+  color: #b8b8b8;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  width: 96%;
+}
+/*Modifies the button below the paragraph section */
+.banner button {
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 60px;
+  letter-spacing: 0.8px;
+  display: flex;
+  align-items: center;
+}
+/*Modifies the button arrow image */
+.banner button svg { 
+  font-size: 25px;
+  margin-left: 25px;
+  transition: 0.3s ease-in-out;
+  line-height: 1;
+}
+/* CSS Styling to hovering over button arrow */
+.banner button:hover svg {
+  margin-left: 25px;
+  
+}
+.banner img { 
+  animation: updown 3s linear infinite;
+}
+@keyframes updown {
+  0% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+.txt-rotate > .wrap { 
+  border-right: 0.08em solid #666;
 }
 
 
