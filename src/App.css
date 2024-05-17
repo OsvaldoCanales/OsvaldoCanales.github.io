@@ -373,6 +373,67 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: -4;
 }
 
+/* Projects CSS */
+
+/* CSS for the whole project container */
+.project { 
+  padding: 80px 0;
+  position: relative;
+  background-color: black;
+ 
+}
+
+/*CSS for the first header */
+.project h2 { 
+  font-size: 45px; 
+  font-weight: 700;
+  text-align: center;
+
+}
+
+/*CSS for the description text */
+.project p { 
+  color: #b8b8b8;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  margin: 14px auto 30px auto;
+  text-align: center;
+  width: 56%;
+
+}
+
+/*CSS for the tab pills */
+.project .nav.nav-pills {
+  width: 72%;
+  margin: 0 auto;
+  border-radius: 50px; 
+  background-color: rgb(255 255 255 / 10%);
+  overflow: hidden;
+
+}
+
+/*CSS for the item pills */
+.project .nav.nav-pills .nav-item { 
+  width: 33.33333%;
+}
+
+.project .nav.nav-pills .nav-link { 
+  background-color: transparent;
+  border-radius: 0;
+  padding: 17px 0;
+  color: #fff;
+  width: 100%;
+  font-size: 17px;
+  letter-spacing: 0.8px;
+  font-weight: 500;
+  position: relative; 
+  transition: 0.3s ease-in-out;
+  text-align: center;
+  z-index: 0;
+  
+}
+
 
 /*
 .App {

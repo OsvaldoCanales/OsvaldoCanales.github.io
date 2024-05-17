@@ -8,7 +8,7 @@ export const Banner = () => {
     const [isDeleting, setIsDeleting] = useState(false);
     const toRotate = [ "Front/End Developer", "Software Engineer", "UI/UX Developer"];
     const [text, setText] = useState('');
-    const [delta, setDelta] = useState(300 - Math.random() * 100); //Set speed for each letter
+    const [delta, setDelta] = useState(400 - Math.random() * 100); //Set speed for each letter
     const period = 2000; //Time Passed between each word
 
     // Responsible for typing and deleting 

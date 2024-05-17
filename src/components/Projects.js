@@ -4,7 +4,7 @@ import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
 
-import colorSharp2 from "../assets/img/color-sharp.png";
+import colorSharp2 from "../assets/img/color-sharp2.png";
 
 
 export const Projects = () => {
@@ -37,18 +37,18 @@ export const Projects = () => {
             <Container>
                 <Row>
                     <Col>
-                    <h2>Projects</h2>
-                    <p>Project description</p>
+                    <h2>My Recent Work</h2>
+                    <p>Here a few projects I've worked on recently. Site is in progress!</p>
                     <Tab.Container id="projects-tabs" defaultActiveKey="first">
                     <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                         <Nav.Item>
-                        <Nav.Link eventKey="first">Tab 1</Nav.Link>
+                        <Nav.Link eventKey="first">React Projects</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                        <Nav.Link eventKey="second">Tab 2</Nav.Link>
+                        <Nav.Link eventKey="second">Django Projects</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                        <Nav.Link eventKey="third">Tab 3</Nav.Link>
+                        <Nav.Link eventKey="third">Other works!</Nav.Link>
                         </Nav.Item>
                     </Nav>
                     <Tab.Content>
