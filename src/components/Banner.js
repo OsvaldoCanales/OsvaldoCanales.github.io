@@ -32,7 +32,7 @@ export const Banner = () => {
         //If text is deleting then set increase speed
         if (isDeleting) { 
             setDelta(prevDelta => prevDelta /2)
-    }
+        }
         //If Text is not deleting and text reaches full, then start deleting text
         if (!isDeleting && updatedText === fullText ) {
             setIsDeleting(true);
