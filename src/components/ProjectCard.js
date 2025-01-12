@@ -1,17 +1,20 @@
-import {Col } from "react-bootstrap"
+import { Link } from "react-router-dom";
 
 
-export const ProjectCard = ({title, description, imgUrl}) => {
-    return ( 
-        <Col sm={6} md = {4}>
-            <div className="proj-imgbx">
-                <img src={imgUrl} />
-                <div className="proj-txtx">
-                    <h4>{title}</h4>
-                    <span>{description}</span>
-
-                </div>
+export const ProjectCard = ({ id, title, description, buttonLabel, imgSrc}) => { 
+    return(
+        <div className="project-card">
+            <div className="project-content">
+                <h3>{title}</h3>
+                <p>{description}</p>
+                <Link to={`/projects/${id}`} className = "view-project" > 
+                    {buttonLabel} &rarr;
+                
+                </Link>
             </div>
-        </Col>
-    )
-}
+            <div className="project-image">
+                <img src={imgSrc} alt={title}/> 
+            </div>
+        </div>
+    );
+};
