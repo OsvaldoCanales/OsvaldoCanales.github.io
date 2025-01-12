@@ -31,7 +31,7 @@ body {
   font-weight: 400;
   overflow-x: hidden;
   position: relative;
-  background-color: #121212 !important;
+  background-color: #1b1919 !important;
   color: #fff !important;
   font-family: 'Centra', sans-serif !important
 
@@ -85,7 +85,7 @@ p.danger {
   color: red;
 }
 
-/* Navbar Css */
+/* Navbar CSS */
 nav.navbar { 
   padding: 18px 0;
   position: fixed;
@@ -250,228 +250,446 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /* Banner CS */
 
-/* CSS Styling for the whole banner section */
 .banner { 
-  margin-top: 0; 
-  padding: 260px 0 100px 0;
-  background-image: url('./assets/img/banner-bg.png');
-  background-position: top center ;
-  background-size: cover;
-  background-repeat: no-repeat;
-  
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  animation: fadeIn 2.5s ease-in-out;
+  background-color: #1b1919;
 }
-/* Modifies the tagline section */
 .banner .tagline { 
-  font-weight: 700;
   letter-spacing: 0.8px;
-  padding: 8px 10px;
-  background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
-  border: 1px solid rgba(255, 255, 255, 0.5);
   font-size: 20px;
-  margin-bottom: 16px;
-  display: inline-block;
-
 }
-/*Modifies the first header */
 .banner h1 { 
-  font-size: 65px; 
-  font-weight: 700;
-  letter-spacing: 0.8px;
+  color: #ffffffef;
+  font-size: 60px; 
   line-height: 1;
-  margin-bottom: 20px;
-  display: block;
+  margin: 0 0 15px 0;
 }
-/*Modifies the paragraph section */
 .banner p { 
+  letter-spacing: 2px;
+  line-height: 1.6;
+  text-align: left;
+  font-size: 18px; 
+  max-width: 800px;
+  margin: 0 auto 30px auto;
   color: #b8b8b8;
-  font-size: 18px;
-  letter-spacing: 0.8px;
-  line-height: 1.5em;
-  width: 96%;
 }
-/*Modifies the button below the paragraph section */
 .banner button {
-  color: #ffffff;
+  color: #ffffffef;
   font-size: 25px;
   font-weight: 700;
   font-size: 20px;
-  margin-top: 60px;
+  margin: 30px auto 0 auto;
   letter-spacing: 0.8px;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
-/*Modifies the button arrow image */
 .banner button svg { 
   font-size: 25px;
   margin-left: 25px;
   transition: 0.3s ease-in-out;
   line-height: 1;
 }
-/* CSS Styling to hovering over button arrow */
 .banner button:hover svg {
   margin-left: 25px;
-  
 }
 .banner img { 
   animation: updown 3s linear infinite;
 }
-/* Animation Styling to move img */
-@keyframes updown {
-  0% {
+@keyframes fadeIn { 
+  0% { 
+    opacity: 0;
     transform: translateY(-20px);
   }
-  50% {
-    transform: translateY(20px);
-  }
-  100% {
-    transform: translateY(-20px);
-  }
-}
-.txt-rotate > .wrap { 
-  border-right: 0.08em solid #666;
-}
-
-/* Skills CSS */
-
-/* Style for the main section */
-.skill { 
-  padding: 0 0 50px 0;
-  position: relative;
-}
-/* Style for the Carousel-box */
-.skill-bx {
-  background: #151515;
-  border-radius: 64px;
-  text-align: center;
-  padding: 60px 50px;
-  margin-top: -60px;
-}
-/*Style for Header */
-.skill h2 { 
-  font-size: 45px;
-  font-weight: 700;
-}
-/* Style for text section */
-.skill p { 
-  color: #b8b8b8;
-  font-size: 18px; 
-  letter-spacing: 0.8px;
-  line-height:  1.5em;
-  margin: 14px 0 75px 0;
-}
-/* Style for the slider images */
-.skill-slider .item img {
-  width: 80%;
-  margin: 0 auto 15px auto; 
-
-}
-/*Style for the background image at the bottom */
-.background-image-left { 
-  top: 28%;
-  position: absolute;
-  bottom: 0;
-  z-index: -4;
-}
-
-/* Projects CSS */
-
-/* CSS for the whole project container */
-.project { 
-  padding: 80px 0;
-  position: relative;
-  background-color: black;
- 
-}
-
-/*CSS for the first header */
-.project h2 { 
-  font-size: 45px; 
-  font-weight: 700;
-  text-align: center;
-
-}
-
-/*CSS for the description text */
-.project p { 
-  color: #b8b8b8;
-  font-size: 18px;
-  letter-spacing: 0.8px;
-  line-height: 1.5em;
-  margin: 14px auto 30px auto;
-  text-align: center;
-  width: 56%;
-
-}
-
-/*CSS for the tab pills */
-.project .nav.nav-pills {
-  width: 72%;
-  margin: 0 auto;
-  border-radius: 50px; 
-  background-color: rgb(255 255 255 / 10%);
-  overflow: hidden;
-
-}
-
-/*CSS for the item pills */
-.project .nav.nav-pills .nav-item { 
-  width: 33.33333%;
-}
-
-.project .nav.nav-pills .nav-link { 
-  background-color: transparent;
-  border-radius: 0;
-  padding: 17px 0;
-  color: #fff;
-  width: 100%;
-  font-size: 17px;
-  letter-spacing: 0.8px;
-  font-weight: 500;
-  position: relative; 
-  transition: 0.3s ease-in-out;
-  text-align: center;
-  z-index: 0;
-  
-}
-
-
-/*
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  100% { 
+    opacity: 1; 
+    transform: translateY(0);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media (max-width: 768px) { 
+  .banner { 
+    padding-top: 250px;
+    height: auto;
+  }
+
+  .banner .tagline { 
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .banner h1 { 
+    font-size: 40px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+  }
+
+  .banner p { 
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .banner button { 
+    font-size: 16px;
+    margin-top: 20px;
+  }
+}
+/* Contact Section */ 
+
+.contact { 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 50px 20px;
+  background-color: #1b1919;
+  color: #fff;
+  height: 100vh;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1.5s ease, transform 0.8s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.contact.visible { 
+  opacity: 1;
+  transform: translateY(0);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.contact h2 { 
+  color: #ffffffef;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.contact-line { 
+  width: 100px;
+  height: 4px;
+  background-color: #00d8ff;
+  margin-bottom: 20px;
+}
+
+.contact form { 
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+}
+
+.contact form label { 
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.contact form input, 
+.contact form textarea { 
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #555;
+  border-radius: 4px;
+  background-color: #222;
+  color: #fff
+}
+
+.contact form input:focus,
+.contact form textarea:focus { 
+  outline: none;
+  border-color: #00d8ff;
+}
+
+.contact form button { 
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #00d8ff;
+  color: #111;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact form button:hover { 
+  background-color: #00a6cc;
+}
+
+/* Success Page  */
+.success { 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  background-color: #1b1919;
+  color: #fff;
+}
+
+.success h2 { 
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.success p { 
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #b8b8b8;
+}
+
+.back-link { 
+  color: #00d8ff;
+  font-size: 16px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.back-link:hover { 
+  color: #00a6cc;
+}
+
+/* Projects */
+.projects-section { 
+  padding: 100px 20px;
+  background-color: #1b1919;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-card-container { 
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1.5s ease, transform 0.8s ease;
+}
+
+.project-card-container.visible { 
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Project Card */
+.project-card { 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 50px auto;
+  gap: 40px;
+}
+
+.project-content { 
+  max-width: 600px;
+}
+
+.project-content h3 { 
+  color: #ffffffe3;
+  font-size: 36px;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.project-content p { 
+  font-size: 18px;
+  color: #b8b8b8;
+  margin-bottom: 30px;
+}
+
+.project-content .view-project { 
+  display: inline-block;
+  font-size: 16px;
+  color: #00d8ff;
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.project-content .view-project:hover { 
+  border-bottom: 2px solid #00d8ff;
+}
+
+/* Project Image Section */
+.project-image { 
+  flex-shrink: 0;
+}
+
+.project-image img { 
+  max-width: 600px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.project-image img:hover { 
+  transform: translateY(-10px) scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) { 
+  .project-card { 
+    flex-direction: column;
+    text-align: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .project-image { 
+    max-width: 400px;
   }
 }
-*/
+
+/* Project Details */
+.project-details { 
+  padding: 250px 20px;
+  background-color: #1b1919;
+  color: #ffffffef;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.project-details h1 { 
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-align: left;
+  width: 100%;
+}
+
+.project-details img { 
+  max-width: 500px;
+  width: 100%;
+  border-radius: 8px;
+  margin: 20px 0;
+  align-self: flex-start;
+}
+
+.project-details p { 
+  font-size: 18px;
+  color: #b8b8b8;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  width: 100%;
+
+}
+
+.project-list { 
+  list-style: none;
+  padding: 0;
+  margin: 20px auto;
+  width: 100%;
+}
+
+.project-list li { 
+  font-size: 18px;
+  color: #b8b8b8;
+  margin-bottom: 10px;
+  text-align: left;
+  border-bottom: 1px solid #333;
+  padding: 10px 0;
+}
+
+.project-link { 
+  display: inline-block;
+  color: #00d8ff;
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 2px solid transparent;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+.project-link:hover { 
+  border-bottom: 2px solid #00d8ff;
+}
+
+/* Project Details: Text Sections */
+.project-section-text { 
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.project-section-text h2 { 
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Ability to do fade in animation on project details. */
+/* .fade-in-container { 
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-container.visible { 
+  opacity: 1;
+  transform: translateY(0);
+} */
+
+.hover-effect { 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-effect:hover { 
+  transform: translateY(-10px) scale(1.05);
+}
+
+/* Resume Page */
+.resume-page { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  padding: 200px 30px;
+}
+
+.resume-page h1 { 
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.resume-image { 
+  max-width: 50%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
+}
+
+.download-link { 
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #00d8ff;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.download-link:hover { 
+  border-bottom: 2px solid #00d8ff;
+}
+
+@media (max-width: 768px) { 
+  .resume-image { 
+    max-width: 100%;
+  }
+
+  .download-link { 
+    padding-top: 20px;
+  }
+}

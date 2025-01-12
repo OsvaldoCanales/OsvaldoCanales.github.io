@@ -1,14 +1,13 @@
 import { Container, Row, Col } from "react-bootstrap";
 import {useState, useEffect} from "react";
 import {ArrowRightCircle } from "react-bootstrap-icons";
-import headerImg from '..//assets/img/header-img.svg';
 
 export const Banner = () => {
-    const [loopNum, setLoopNum] = useState(0); //Loop through toRotate phrases
+    const [loopNum, setLoopNum] = useState(0); 
     const [isDeleting, setIsDeleting] = useState(false);
-    const toRotate = [ "Front/End Developer", "Software Engineer", "UI/UX Developer"];
+    const toRotate = [ "Software Engineer", "Rust Developer", "UI/UX Developer", "Java Developer",];
     const [text, setText] = useState('');
-    const [delta, setDelta] = useState(400 - Math.random() * 100); //Set speed for each letter
+    const [delta, setDelta] = useState(400 - Math.random() * 100); 
     const period = 2000; //Time Passed between each word
 
     // Responsible for typing and deleting 
@@ -27,7 +26,7 @@ export const Banner = () => {
         //If word is being added then add a letter 
         let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
 
-        setText(updatedText);
+        setText(updatedText); 
 
         //If text is deleting then set increase speed
         if (isDeleting) { 
@@ -37,6 +36,7 @@ export const Banner = () => {
         if (!isDeleting && updatedText === fullText ) {
             setIsDeleting(true);
             setDelta(period)
+            return;
             //If it is deleting and reaches end of text, then stop deleting and move to next word
         } else if (isDeleting && updatedText === '') {
             setIsDeleting(false);
@@ -50,14 +50,21 @@ export const Banner = () => {
         <section className= "banner" id ="home" >
             <Container>
                 <Row className ="align-items-center">
-                    <Col xs={12} md={6} xl={7} >
-                        <span className ="tagline">Welcome to my Portfolio</span>
-                        <h1>{"" }<span className="wrap"> {text} </span></h1>
-                        <p>Hi. I'm Osvaldo Canales and I am currently a third year at UCCS based in Colorado Springs, Colorado with a passion to design and code beautiful simple things, and I love what I do.</p>
-                        <button onClick={() => console.log('connect')}>Lets Connect <ArrowRightCircle size = {25} /></button>
-                    </Col>
-                    <Col xs={12} md={6} xl={5}>
-                        <img src={headerImg} alt="Header Img" />
+                    <Col xs={12} >
+                    <span className ="tagline">{text}</span>
+                        <h1> Hi, I'm Osvaldo Canales</h1>
+                        <p>
+                            I am currently a student at UCCS pursuing a B.S in Computer Science. I live in Colorado 
+                            Springs working as a junior software engineer at Parsons Corporations. My projects include UX design, UI animations 
+                            and manipulating data. I am always working on new projects to sharpen my skills and learn new things. In my spare time I like 
+                            to work out, play video games and watch anime. I'm always down to hear about new projects, so feel free to drop me a line. 
+                        </p>
+                        <button onClick={() => {
+                            const contactSection = document.getElementById('contact');
+                            if (contactSection) {
+                                contactSection.scrollIntoView({ behavior: 'smooth' });
+                            }
+                            }}> Send me a message <ArrowRightCircle size = {25} /></button>
                     </Col>
                 </Row>
             </Container>

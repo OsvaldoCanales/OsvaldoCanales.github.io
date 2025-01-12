@@ -1,81 +1,45 @@
-import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
-import { ProjectCard } from "./ProjectCard";
-import projImg1 from "../assets/img/project-img1.png";
-import projImg2 from "../assets/img/project-img2.png";
-import projImg3 from "../assets/img/project-img3.png";
+import { useInView } from "react-intersection-observer"
+import sudoku from "../assets/img/Sudoku_solver.png";
+import sentiment from "../assets/img/Sentiment_homepage.png";
+import { ProjectCard } from './ProjectCard';
 
-import colorSharp2 from "../assets/img/color-sharp2.png";
+export const Projects = () => { 
+    const {ref, inView} = useInView({
+        triggerOnce: true,
+        threshold: 0.2,
+    });
 
-
-export const Projects = () => {
-    const projects = [
+    const projectList = [ 
         {
-            title: "Project Title1",
-            description: "Default Image",
-            imgUrl: projImg1,
-           
+            id: "sudoku-solver",
+            title: "Sudoku Solver", 
+            description: " Application which is able to solve a sudoku puzzle step-by-step in real time.",
+            imgSrc: sudoku,      
         },
         {
-            title: "Project Title2",
-            description: "Default Image",
-            imgUrl: projImg2,
+            id: "sentiment-analysis",
+            title: "Sentiment Analysis",
+            description: " Application that incorporates Panda and NLTK libraries to read thousands of reviewed comments and score them based on mood.",
+            imgSrc: sentiment,
 
-          
-        },
-        {
-            title: "Project Title3",
-            description: "Default Image",
-            imgUrl: projImg3,
-
-            
-        },
-    
+        }
     ];
 
-    return (
-        <section className="project" id="project">
-            <Container>
-                <Row>
-                    <Col>
-                    <h2>My Recent Work</h2>
-                    <p>Here a few projects I've worked on recently. Site is in progress!</p>
-                    <Tab.Container id="projects-tabs" defaultActiveKey="first">
-                    <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
-                        <Nav.Item>
-                        <Nav.Link eventKey="first">React Projects</Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item>
-                        <Nav.Link eventKey="second">Django Projects</Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item>
-                        <Nav.Link eventKey="third">Other works!</Nav.Link>
-                        </Nav.Item>
-                    </Nav>
-                    <Tab.Content>
-                        <Tab.Pane eventKey="first">
-                            <Row>
-                                {
-                                    projects.map((project, index) => {
-                                        return ( 
-                                           <ProjectCard
-                                            key={index}
-                                            {...project}
-                                            />
-                                        )
-                                    })
-                                }
-                            </Row>
-                        </Tab.Pane>
-                        <Tab.Pane eventKey="second"> Second Tab Pane</Tab.Pane>
-                        <Tab.Pane eventKey="third"> Third Tab Pane</Tab.Pane>
-                    </Tab.Content>
-                    </Tab.Container>
-                    </Col>
-                </Row>
-            </Container>
-            <img className="background-image-right" src={colorSharp2}></img>
+    return ( 
+        <section id="projects" className="projects-section">
+            <div ref={ref} className={`project-card-container ${inView ? "visible": ""}`}>
+                {projectList.map((project) => (
+                    <ProjectCard
+                        key = {project.id}
+                        id = {project.id}
+                        title = {project.title}
+                        description = {project.description}
+                        buttonLabel = "View Project"
+                        imgSrc = {project.imgSrc}
+                    />
+                ))}
+            </div>
         </section>
-
     )
-
 }
+
